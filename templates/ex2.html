@@ -8,7 +8,10 @@
     <title>Ex2</title>
 </head>
 <body>
-{{ posts.name }}
+{% for i in posts %}
+{{ i.name }}
 {{ data }}
+<a href = "{% url 'cbv:redirect-task' pk=i.id%}">{{ i.name }}</a><br>
+{% endfor %}
 </body>
 </html>
